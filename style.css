@@ -1,0 +1,294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.side-bar{
+    width: 300px;
+    background-color: rgb(39, 36, 36);
+    padding: 24px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.nav-biblioteca{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-biblioteca button{
+    height: 1px;
+
+    background-color: transparent;
+    color:gray;
+    padding: 4px 6px;
+    border-radius: 12px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    margin: 20px; 
+    cursor: pointer;
+    
+}
+
+.nav-biblioteca i, .nav-biblioteca p{
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+    padding:0 20px 0 0;
+    cursor: pointer;
+    
+}
+
+.nav-starlist, .nav-starcast{
+    background-color: rgb(59, 59, 59);
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 30px;
+
+}
+
+.nav-starlist button, .nav-starcast button{
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-starlist p, .nav-starcast p{
+    font-size: 14px;
+    margin: 12px 0;
+
+}
+
+.nav-footer{
+     display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.nav-footer a{
+    color: grey;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 20px 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+  
+.nav-lag{
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(39, 36, 36);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 6px 8px;
+    border-radius: 12px;
+    margin: 100px 10px;
+    cursor: pointer;
+}
+
+main{
+    padding: 24px;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+
+.main-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0); 
+}
+
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-star {
+    font-size: 50px;
+    color: white;
+}
+
+.home-button {
+    background-color: #242424;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.home-button i {
+    color: white;
+    font-size: 20px;
+}
+
+.home-button:hover {
+    background-color: #7c7c7c;
+    transform: scale(1.05);
+}
+
+
+.search-bar {
+    background-color: #242424;
+    padding: 10px 15px;
+    border-radius: 30px; 
+    display: flex;
+    align-items: center;
+    flex: 1; 
+    max-width: 400px;
+    border: 1px solid transparent;
+}
+
+.search-bar:focus-within {
+    border-color: white;
+}
+
+.search-bar i {
+    color: #b3b3b3;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+
+
+.barra-sup{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    margin-left: 80px;
+}
+
+.barra-sup a,.barra-login  a{
+    font-size: 18px;
+    font-weight: bold;
+    color: grey;
+    text-decoration: none;
+}
+
+.barra-login{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 160px;
+    gap: 50px;
+}
+
+.barra-login button{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color: rgb(56, 56, 56);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 12px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.barra-login button:hover{
+    background-color: #7c7c7c;
+    color: rgb(0, 0, 0);
+}
+
+.content H2{
+    padding: 16px;
+}
+
+
+.music-grid, .artists-grid, .albuns-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.music-card, .artits-card, .album-card {
+    padding: 6px;
+    align-items: center;
+}
+
+.music-card:hover, .artits-card:hover, .album-card:hover {
+    background-color: #1f1e1e;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.music-card img, .artits-card img, .album-card img {
+    width: 100%;
+    aspect-ratio: 1/1; /* Mantém a imagem quadrada */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    
+}
+
+.music-card img{
+    border-radius: 12px;
+}
+
+.artits-card img {
+    border-radius: 50%;
+}
+
+.music-card h3, .artits-card h3, .album-card h3{
+    font-size: 14px;
+    align-items: center;
+    margin: 10px;
+}
+
+.music-card p, .artits-card p, .album-card p{
+    font-size: 12px;
+    align-items: center;
+    margin: 0 10px;
+}
+
+
